@@ -1,0 +1,39 @@
+apiVersion: argoproj.io/v1alpha1
+kind: ApplicationSet
+metadata:
+  name: deploy-projects
+spec:
+#  goTemplate: true
+#  goTemplateOptions: ["missingkey=error"]
+  generators:
+    - list:
+        elements:
+          - cluster: in-cluster
+  template:
+    metadata:
+      name: 'projects-{{cluster}}'
+    spec:
+      project: default
+      source:
+        repoURL: https://1A4D@dev.azure.com/1A4D/AladdinKubernetesPlatform/_git/argocd-example-apps
+#        repoURL: https://github.com/KojoRising/argocd-example-apps.git
+#        repoURL: https://github.com/infra-team/cluster-deployments.git
+        targetRevision: feat/develop
+        path: sample-projects
+      destination:
+        name: '{{cluster}}'
+        namespace: argocd
+      syncPolicy:
+        automated:
+          prune: true
+#source:
+#  path: 'projects'
+#  repoURL: https://1A4D@dev.azure.com/1A4D/AladdinKubernetesPlatform/_git/cluster-components
+#  targetRevision: HEAD
+#destination:
+#  namespace: akp-gitops
+#  name: '{{name}}'
+#syncPolicy:
+#  automated:
+#    prune: true
+#
