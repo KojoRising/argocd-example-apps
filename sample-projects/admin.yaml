@@ -8,3 +8,5 @@ spec:
   destinations:
     - namespace: '*'
       server: '*'
+  sourceRepos:
+    - '*'

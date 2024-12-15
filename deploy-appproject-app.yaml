@@ -15,8 +15,8 @@ spec:
     spec:
       project: default
       source:
-        repoURL: https://1A4D@dev.azure.com/1A4D/AladdinKubernetesPlatform/_git/argocd-example-apps
-#        repoURL: https://github.com/KojoRising/argocd-example-apps.git
+#        repoURL: https://1A4D@dev.azure.com/1A4D/AladdinKubernetesPlatform/_git/argocd-example-apps
+        repoURL: https://github.com/KojoRising/argocd-example-apps.git
 #        repoURL: https://github.com/infra-team/cluster-deployments.git
         targetRevision: feat/develop
         path: sample-projects
