@@ -1,12 +1,12 @@
-apiVersion: argoproj.io/v1alpha1
-kind: AppProject
-metadata:
-  name: admin
-  namespace: argocd
-spec:
-  description: Admin Project
-  destinations:
-    - namespace: '*'
-      server: '*'
-  sourceRepos:
-    - '*'
+# apiVersion: argoproj.io/v1alpha1
+# kind: AppProject
+# metadata:
+#   name: admin
+#   namespace: argocd
+# spec:
+#   description: Admin Project
+#   destinations:
+#     - namespace: '*'
+#       server: '*'
+#   sourceRepos:
+#     - '*'
