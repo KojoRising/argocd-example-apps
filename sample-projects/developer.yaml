@@ -3,9 +3,9 @@ kind: AppProject
 metadata:
   name: developer
   namespace: argocd
-  annotations:
-    argocd.argoproj.io/sync-options: Delete=confirm
-    argocd.argoproj.io/sync-options: Delete=false
+  # annotations:
+  #   argocd.argoproj.io/sync-options: Delete=confirm
+  #   argocd.argoproj.io/sync-options: Delete=false
 spec:
   description: Developer Project
   destinations:
